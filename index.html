@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Regine | Administrative & Project Management Professional</title>
+
+  <meta name="description" content="Professional portfolio of Regine, an Administrative and Project Management Professional specialising in project coordination, PMO, reporting, documentation and operations.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8f3ec;
+      color: #332d29;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 243, 236, 0.96);
+      border-bottom: 1px solid #e5dbcf;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: #5c5149;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #9a7862;
+    }
+
+    /* GENERAL */
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 100px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #74675d;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      max-width: 1150px;
+      margin: auto;
+      padding: 100px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text .tag {
+      display: inline-block;
+      background: #e8ddd1;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 22px;
+      color: #6b5749;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      margin-bottom: 25px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #98755d;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      color: #6d625a;
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #806451;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #654d3d;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #bca99a;
+      color: #5d4d42;
+    }
+
+    .btn-secondary:hover {
+      background: #e9dfd5;
+    }
+
+    .hero-card {
+      width: 330px;
+      height: 380px;
+      background: #e6d8ca;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      flex-shrink: 0;
+    }
+
+    .hero-card-inner {
+      border: 1px solid #bda999;
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .initial {
+      font-size: 80px;
+      font-weight: bold;
+      color: #806451;
+      margin-bottom: 15px;
+    }
+
+    .hero-card p {
+      color: #6d5d52;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #625850;
+    }
+
+    .about-highlight {
+      background: #eee4da;
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .about-highlight h3 {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .about-highlight ul {
+      list-style: none;
+    }
+
+    .about-highlight li {
+      padding: 10px 0;
+      border-bottom: 1px solid #d9cbbd;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 30px;
+      border: 1px solid #e6ddd4;
+      border-radius: 16px;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(80, 60, 45, 0.08);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 18px;
+      color: #806451;
+    }
+
+    .skill-card ul {
+      list-style: none;
+    }
+
+    .skill-card li {
+      margin-bottom: 10px;
+      color: #6d625a;
+    }
+
+    .skill-card li::before {
+      content: "✓ ";
+      color: #98755d;
+      font-weight: bold;
+    }
+
+    /* EXPERIENCE */
+
+    .timeline {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .experience-card {
+      background: white;
+      border-left: 4px solid #98755d;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 0 14px 14px 0;
+      box-shadow: 0 5px 20px rgba(80, 60, 45, 0.05);
+    }
+
+    .experience-card h3 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .experience-card .company {
+      color: #98755d;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+      color: #665c55;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid #e5ddd5;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-number {
+      font-size: 14px;
+      color: #98755d;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .project-card p {
+      color: #6b625b;
+      margin-bottom: 20px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tags span {
+      background: #eee5dc;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #6c584a;
+    }
+
+    /* TOOLS */
+
+    .tools {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .tool {
+      background: white;
+      border: 1px solid #e3d9cf;
+      padding: 12px 20px;
+      border-radius: 30px;
+      color: #66584f;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      text-align: center;
+      background: #e8ddd2;
+      max-width: none;
+      padding: 100px 25px;
+    }
+
+    .contact-section h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contact-section p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #665a51;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #332d29;
+      color: #e8ddd2;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 70px;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .hero-card {
+        width: 280px;
+        height: 320px;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-container">
+
+      <div class="logo">REGINE.</div>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-text">
+
+      <span class="tag">ADMINISTRATION • PMO • PROJECT MANAGEMENT</span>
+
+      <h1>
+        Organised.<br>
+        Reliable.<br>
+        <span>Results-driven.</span>
+      </h1>
+
+      <p class="hero-description">
+        I'm Regine, an Administrative and Project Management Professional
+        with experience supporting projects, operations, reporting,
+        documentation, and stakeholder coordination.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#projects" class="btn btn-primary">
+          View My Work
+        </a>
+
+        <a href="Regine_Resume.pdf"
+           class="btn btn-secondary"
+           target="_blank">
+          Download Resume
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <div class="hero-card-inner">
+
+        <div class="initial">R</div>
+
+        <h3>Professional Portfolio</h3>
+
+        <p>
+          Administrative Support<br>
+          Project Coordination<br>
+          PMO & Operations
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+      <h2>About Me</h2>
+      <p>Professional experience built around organisation and efficiency.</p>
+    </div>
+
+    <div class="about-container">
+
+      <div class="about-text">
+
+        <p>
+          I am an experienced professional with a background in
+          administrative support, project management, project control,
+          PMO operations, reporting, and stakeholder coordination.
+        </p>
+
+        <p>
+          Throughout my career, I have supported project teams by
+          maintaining accurate information, coordinating resources,
+          preparing reports, managing documentation, and helping
+          teams stay aligned with their goals.
+        </p>
+
+        <p>
+          I enjoy bringing structure to complex tasks, improving
+          processes, and making sure important details are handled
+          accurately and efficiently.
+        </p>
+
+      </div>
+
+
+      <div class="about-highlight">
+
+        <h3>What I Bring</h3>
+
+        <ul>
+          <li>Strong organisation and attention to detail</li>
+          <li>Project coordination experience</li>
+          <li>Reporting and data management</li>
+          <li>Stakeholder communication</li>
+          <li>Process documentation and improvement</li>
+          <li>Remote collaboration and support</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-title">
+
+      <h2>My Skills</h2>
+
+      <p>
+        A combination of administrative, project, and operational expertise.
+      </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+      <!-- CATEGORY 1 -->
+
+      <div class="skill-card">
+
+        <h3>Administration</h3>
+
+        <ul>
+          <li>Administrative Support</li>
+          <li>Documentation</li>
+          <li>Calendar & Schedule Coordination</li>
+          <li>Email & Communication</li>
+          <li>Data Entry & Management</li>
+          <li>Process Documentation</li>
+        </ul>
+
+      </div>
+
+
+      <!-- CATEGORY 2 -->
+
+      <div class="skill-card">
+
+        <h3>Project Management</h3>
+
+        <ul>
+          <li>Project Coordination</li>
+          <li>Project Planning</li>
+          <li>Resource Management</li>
+          <li>Forecasting & Reconciliation</li>
+          <li>Project Reporting</li>
+          <li>Stakeholder Coordination</li>
+        </ul>
+
+      </div>
+
+
+      <!-- CATEGORY 3 -->
+
+      <div class="skill-card">
+
+        <h3>Tools & Technology</h3>
+
+        <ul>
+          <li>Microsoft Excel</li>
+          <li>Microsoft Project</li>
+          <li>Power BI</li>
+          <li>SAP Easy Access</li>
+          <li>SharePoint</li>
+          <li>Power Automate</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <div class="section-title">
+
+      <h2>Experience</h2>
+
+      <p>
+        Experience supporting projects, teams, and business operations.
+      </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <!-- EXPERIENCE 1 -->
+
+      <div class="experience-card">
+
+        <h3>Project Control Officer</h3>
+
+        <div class="company">
+          Project Control / Finance
+        </div>
+
+        <ul>
+          <li>
+            Supported Client Project Managers with project work plans,
+            resource forecasting, and cost reconciliation.
+          </li>
+
+          <li>
+            Prepared financial reports, forecasts, and variance analysis
+            to support project decision-making.
+          </li>
+
+          <li>
+            Maintained project plans and monitored project costs,
+            resources, and work hours.
+          </li>
+
+          <li>
+            Created dashboards and reports for management review.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- EXPERIENCE 2 -->
+
+      <div class="experience-card">
+
+        <h3>Delivery PMO</h3>
+
+        <div class="company">
+          Project & Operations Support
+        </div>
+
+        <ul>
+
+          <li>
+            Supported Offshore and Onshore Delivery Leads,
+            Executives, and Project Managers with administrative
+            and project activities.
+          </li>
+
+          <li>
+            Managed onboarding, offboarding, client access requests,
+            trackers, and forecast reports.
+          </li>
+
+          <li>
+            Supported project sites using SharePoint and
+            Microsoft Power Automate.
+          </li>
+
+          <li>
+            Created job aids and documentation and supported
+            knowledge transfer sessions.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- EXPERIENCE 3 -->
+
+      <div class="experience-card">
+
+        <h3>Operations & Administrative Support</h3>
+
+        <div class="company">
+          Operations Management
+        </div>
+
+        <ul>
+
+          <li>
+            Monitored daily transactions, inventory, sales reports,
+            and unit movements across multiple branches.
+          </li>
+
+          <li>
+            Maintained accurate operational records and monitored
+            unit ordering, releasing, and documentation.
+          </li>
+
+          <li>
+            Coordinated information between branches and
+            relevant stakeholders.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="section-title">
+
+      <h2>Featured Projects</h2>
+
+      <p>
+        Examples of professional work and capabilities.
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+      <div class="project-card">
+
+        <div class="project-number">01 / PROJECT MANAGEMENT</div>
+
+        <h3>Project Tracker</h3>
+
+        <p>
+          Sample project tracking system designed to monitor
+          tasks, owners, deadlines, progress, and project status.
+        </p>
+
+        <div class="project-tags">
+          <span>Excel</span>
+          <span>Project Management</span>
+          <span>Tracking</span>
+        </div>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-number">02 / REPORTING</div>
+
+        <h3>Management Dashboard</h3>
+
+        <p>
+          Sample dashboard designed to present project,
+          resource, and operational information in an easy-to-read format.
+        </p>
+
+        <div class="project-tags">
+          <span>Excel</span>
+          <span>Power BI</span>
+          <span>Reporting</span>
+        </div>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-number">03 / DOCUMENTATION</div>
+
+        <h3>SOP & Process Guide</h3>
+
+        <p>
+          Sample standard operating procedure designed to
+          document processes and make tasks easier to follow.
+        </p>
+
+        <div class="project-tags">
+          <span>SOP</span>
+          <span>Documentation</span>
+          <span>Process Improvement</span>
+        </div>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-number">04 / ADMINISTRATION</div>
+
+        <h3>Resource Planning</h3>
+
+        <p>
+          Sample resource planning document showing how
+          workloads, assignments, timelines, and requirements
+          can be organised.
+        </p>
+
+        <div class="project-tags">
+          <span>Resource Planning</span>
+          <span>Excel</span>
+          <span>PMO</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TOOLS -->
+
+  <section>
+
+    <div class="section-title">
+
+      <h2>Tools I Work With</h2>
+
+      <p>
+        Technology and productivity tools used throughout my experience.
+      </p>
+
+    </div>
+
+    <div class="tools">
+
+      <span class="tool">Microsoft Excel</span>
+      <span class="tool">Microsoft Project</span>
+      <span class="tool">Power BI</span>
+      <span class="tool">SAP</span>
+      <span class="tool">SharePoint</span>
+      <span class="tool">Power Automate</span>
+      <span class="tool">Microsoft Office</span>
+      <span class="tool">Google Workspace</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact-section">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+      I'm open to remote opportunities where I can contribute my
+      administrative, project management, coordination, and
+      organisational skills.
+    </p>
+
+    <div class="contact-buttons">
+
+      <!-- Replace the email address below -->
+      <a href="mailto:YOUR-EMAIL@example.com"
+         class="btn btn-primary">
+        Email Me
+      </a>
+
+      <!-- Replace YOUR-LINKEDIN with your actual LinkedIn URL -->
+      <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+         target="_blank"
+         class="btn btn-secondary">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/YOUR-GITHUB"
+         target="_blank"
+         class="btn btn-secondary">
+        GitHub
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Regine. All rights reserved.
+    </p>
+
+    <p>
+      Administrative Support • Project Management • PMO
+    </p>
+
+  </footer>
+
+</body>
+</html>
